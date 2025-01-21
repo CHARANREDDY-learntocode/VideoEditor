@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "52ffa361-e885-4c18-b4db-1fd246fa5eb0",
+		"name": "VideoEditor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16984315"
+	},
+	"item": [
+		{
+			"name": "Trim Video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_time",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "45",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:5000/video//trim-video/big_buck_bunny_720p_10mb.mp4"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/Users/charanreddy/Downloads/big_buck_bunny_720p_10mb.mp4"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:5000/video/upload-video/"
+			},
+			"response": []
+		},
+		{
+			"name": "Merge Video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"videos\": [\"big_buck_bunny_720p_10mb.mp4\", \"trimmed_big_buck_bunny_720p_10mb.mp4\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/video/merge-videos"
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateLink",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/video/generate-link/1"
+			},
+			"response": []
+		},
+		{
+			"name": "SharedVideo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/video/shared/1/58c410ce3d64edb93a657ccee04bab4cd53027befaec7213"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "example-token-123"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
