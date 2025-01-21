@@ -26,10 +26,9 @@ This project provides a RESTful API for video editing, allowing you to upload, t
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/video-editor-api.git
-   cd video-editor-api
+   git clone git@github.com:CHARANREDDY-learntocode/VideoEditor.git
+   cd VideoEditor
    
-
 python3 -m venv venv
 source venv/bin/activate  # For Windows, use `venv\Scripts\activate`
 
